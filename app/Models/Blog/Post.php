@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Blog;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,6 +20,6 @@ class Post extends Model
      */
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Models\Blog\Comment');
     }
 }

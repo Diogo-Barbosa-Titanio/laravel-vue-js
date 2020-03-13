@@ -15,10 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Front
+Route::get('/post', 'Blog\Front\PostController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Admin
+Route::get('admin/post', 'Blog\Admin\PostController@index');
 
+//Auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
